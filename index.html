@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #1e1d1d;
+            height: 100vh;
+        }
+
+        .container {
+            width: 450px;
+            padding: 1.2rem 1.6rem;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .container p {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+.error{
+    color: red;
+    font-weight: 400px;
+    display: none;
+}
+        .input_group {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .input_group input {
+            font-size: 1.2rem;
+            background-color: white;
+
+            width: 100%;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin: 12px auto;
+            border: 0.2px solid black;
+        }
+
+        .input_group input::placeholder {
+
+            background-color: white;
+            color: rgb(26, 26, 26);
+        }
+
+        .input_group button {
+            font-size: 1.2rem;
+            border: none;
+            outline: none;
+            width: 100%;
+            border-radius: 4px;
+            padding: 6px 8px;
+            background-color: rgb(108, 0, 241);
+            box-shadow: 4px 3px 6px -1px grey;
+            color: white;
+        }
+
+        #img_box {
+            max-height: 0;
+        }
+
+        #img_box.show-img {
+            margin: 10px auto;
+            max-height: 300px;
+            transition: all ease 1.6s;
+        }
+    </style>
+    <title>QR code Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>Neo  QR Code Generator</p>
+        <div class="error">
+            <p>Enter some text to generateQR<p>
+        </div>
+        
+        <div class="input_group">
+
+            <input type="text" name="URL" placeholder="Enter your text or URL" id="qrtext">
+            <div id="img_box">
+                <img src="" alt="" id="qrimage">
+            </div>
+            <button onclick="generateQR()" class="btn">Generate QR code </button>
+        </div>
+    </div>
+
+    <script src="app.js">
+        
+        
+    </script>
+</body>
+
+</html>
